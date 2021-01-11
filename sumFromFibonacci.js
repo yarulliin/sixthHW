@@ -5,7 +5,7 @@ function calcSumFromFibonacci(from, to) {
     if (typeof from != 'number' || typeof to != 'number') {
         throw 'Error!';
     }
-    if (from == NaN || to == NaN || from == Infinity || to == Infinity) {
+    if (!isFinite(from) || !isFinite(to)) {
         throw 'Error!';
     }
     if (from < 0 || to < from) {
